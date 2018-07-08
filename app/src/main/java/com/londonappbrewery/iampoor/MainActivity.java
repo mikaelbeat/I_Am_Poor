@@ -16,4 +16,16 @@ public class MainActivity extends AppCompatActivity {
         mMediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.fall);
         mMediaPlayer.start();
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mMediaPlayer.pause();
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        mMediaPlayer.start();
+    }
 }
